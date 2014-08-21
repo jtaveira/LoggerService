@@ -47,9 +47,10 @@ The following functions do the same as the console functions:
   * ```trace(logId, type)``` or ```type.trace(logId)```
   * ```warn(logId, type, args[])``` or ```type.warn(logId, args[])```
 
+```
 Example usage:
 
-```logger.noisyMode()
+logger.noisyMode()
 If you don't set to noisy, the console won't show you anything.
 logger.log("testId", "component", "testArgument")
 Console : testArgument
