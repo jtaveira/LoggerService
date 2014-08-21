@@ -3,7 +3,7 @@ The Logger Service
 
 ### Brief Description ###
 
-The Logger Service will take console log testing a step further. You will be able to filter all of your tests and send all the resulting test information to a database, meaning you can keep track of all your testing logs.
+The Logger Service will take console log testing a step further. You will be able to filter all of your logs and send all the resulting log information to a database, meaning you can keep track of all your testing logs.
 
 ### How to use & How it works ###
 
@@ -12,6 +12,8 @@ The Logger class has 2 possible modes, the silent(default) mode and the noisy mo
   * component (default)
   * source
   * performance
+
+Note that if you wish to temper with the source code, and for some reason you want to add more logTypes, just add in the enum.LOGTYPE and the methods for that logType will automatically be available.
 
 There is also a second layer of filtering which is the logId (undefined as default). The logId can be whatever value the user wants. If the logId remains unchanged, the program will only take into account the logType. On the other hand, both logType and logId must match in order for the test to show on the console.
 
@@ -44,6 +46,16 @@ The following functions do the same as the console functions:
   * ```timeEnd(logId, type, label)``` or ```type.timeEnd(logId, label)```
   * ```trace(logId, type)``` or ```type.trace(logId)```
   * ```warn(logId, type, args[])``` or ```type.warn(logId, args[])```
+
+Example usage:
+
+  > ```logger.noisyMode()``` if you don't set to noisy, the console won't show you anything.
+  > ```logger.log("testId", "component", "testArgument")```
+  > Console : testArgument
+  > ```logger.component.log("testId", "testArgument")```
+  > Console : testArgument
+  >
+  > For both commands the result is the same.
 
 Regarding the logs sent to the database, there is nothing to worry about. As soon as the buffer reaches the limit, all data will be flushed to the database. But what if I accidentally close my browser before reaching the buffer limit? Nothing to worry. On closure, all data in memory will be sent to the database without taking into account the buffer size and limit, therefore there is no data loss.
 
