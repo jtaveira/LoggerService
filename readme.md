@@ -49,10 +49,16 @@ The following functions do the same as the console functions:
 
 Example usage:
 
-  > ```logger.noisyMode()``` if you don't set to noisy, the console won't show you anything.
+  > ```logger.noisyMode()``` 
+  >
+  > if you don't set to noisy, the console won't show you anything.
+  >
   > ```logger.log("testId", "component", "testArgument")```
+  >
   > Console : testArgument
+  >
   > ```logger.component.log("testId", "testArgument")```
+  >
   > Console : testArgument
   >
   > For both commands the result is the same.
