@@ -13,7 +13,7 @@ The Logger class has 2 possible modes, the silent(default) mode and the noisy mo
   * source
   * performance
 
-Note that if you wish to temper with the source code, and for some reason you want to add more logTypes, just add in the enum.LOGTYPE and the methods for that logType will automatically be available.
+Note that if you wish to tamper with the source code, and for some reason you want to add more logTypes, just add in the enum.LOGTYPE and the methods for that logType will automatically be available.
 
 There is also a second layer of filtering which is the logId (undefined as default). The logId can be whatever value the user wants. If the logId remains unchanged, the program will only take into account the logType. On the other hand, both logType and logId must match in order for the test to show on the console.
 
