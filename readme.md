@@ -20,12 +20,12 @@ You may now be wondering why is all this filtering needed. Simple. If you have a
 With that in mind, let's proceed to the actual usage of the program.
 
 This can be done either directly in the browser's console or hardcoded. There are many commands available, and all of them can be seen simply by opening up the console and typing: 'Logger.'.
-This will show all methods avaible. Anyway, here is a list with a simple definition:
+This will show all methods avaible. Anyway, here is a list with a simple definition (Logger.):
 
   * silentMode() : Turns the mode to silent
   * noisyMode() : Turns the mode to noisy
   * setLoggerBufferLimit(limit) : Changes the ammount of logs to save in memory
-  * switchLogType(logType) : Changes the logType to logType is it exists
+  * switchLogType(logType) : Changes the logType to logType if it exists
   * switchLogId(logId) : Changes the logId to logId
 
 The following functions do the same as the console functions:
