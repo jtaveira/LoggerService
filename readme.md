@@ -47,7 +47,7 @@ The following functions do the same as the console functions:
   * ```trace(logId, type)``` or ```type.trace(logId)```
   * ```warn(logId, type, args[])``` or ```type.warn(logId, args[])```
 
-Example usage
+Example usage:
 
 ```
 logger.noisyMode()
