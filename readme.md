@@ -35,24 +35,15 @@ The following functions do the same as the console functions:
   * ```error(logId, type, args[])``` or ```type.error(logId, args[])```
   * ```group(logId, type, args[])``` or ```type.group(logId, args[])```
   * ```groupCollapsed(logId, type, args[])``` or ```type.groupCollapsed(logId, args[])```
-  * ```groupEnd(logId, type)``` or 
-  ```type.groupEnd(logId)```
-  * ```info(logId, type, args[])``` or 
-  ```type.info(logId, args[])```
-  * ```log(logId, type, args[])``` or 
-  ```type.log(logId, args[])```
-  * ```profile(logId, type, label)``` or 
-  ```type.profile(logId, label)```
-  * ```profileEnd(logId, type)``` or 
-  ```type.profileEnd(logId)```
-  * ```time(logId, type, label)``` or 
-  ```type.time(logId, label)```
-  * ```timeEnd(logId, type, label)``` or 
-  ```type.timeEnd(logId, label)```
-  * ```trace(logId, type)``` or 
-  ```type.trace(logId)```
-  * ```warn(logId, type, args[])``` or 
-  ```type.warn(logId, args[])```
+  * ```groupEnd(logId, type)``` or ```type.groupEnd(logId)```
+  * ```info(logId, type, args[])``` or ```type.info(logId, args[])```
+  * ```log(logId, type, args[])``` or ```type.log(logId, args[])```
+  * ```profile(logId, type, label)``` or ```type.profile(logId, label)```
+  * ```profileEnd(logId, type)``` or ```type.profileEnd(logId)```
+  * ```time(logId, type, label)``` or ```type.time(logId, label)```
+  * ```timeEnd(logId, type, label)``` or ```type.timeEnd(logId, label)```
+  * ```trace(logId, type)``` or ```type.trace(logId)```
+  * ```warn(logId, type, args[])``` or ```type.warn(logId, args[])```
 
 Regarding the logs sent to the database, there is nothing to worry about. As soon as the buffer reaches the limit, all data will be flushed to the database. But what if I accidentally close my browser before reaching the buffer limit? Nothing to worry. On closure, all data in memory will be sent to the database without taking into account the buffer size and limit, therefore there is no data loss.
 
