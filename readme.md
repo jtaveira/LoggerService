@@ -22,31 +22,28 @@ With that in mind, let's proceed to the actual usage of the program.
 This can be done either directly in the browser's console or hardcoded. There are many commands available, and all of them can be seen simply by opening up the console and typing: 'logger.'.
 This will show all methods avaible. Anyway, here is a list with a simple definition (logger.):
 
-  * ```javascript 
-  silentMode()
-  ```
-   : Turns the mode to silent
-  * noisyMode() : Turns the mode to noisy
-  * setLoggerBufferLimit(limit) : Changes the ammount of logs to save in memory
-  * switchLogType(logType) : Changes the logType to logType if it exists
-  * switchLogId(logId) : Changes the logId to logId
+  * ```silentMode()``` : Turns the mode to silent
+  * ```noisyMode()``` : Turns the mode to noisy
+  * ```setLoggerBufferLimit(limit)``` : Changes the ammount of logs to save in memory
+  * ```switchLogType(logType)``` : Changes the logType to logType if it exists
+  * ```switchLogId(logId)``` : Changes the logId to logId
 
 The following functions do the same as the console functions:
 
-  * clear()
-  * count(logId, type, label) or type.count(logId, label) 
-  * error(logId, type, args[]) or type.error(logId, args[])
-  * group(logId, type, args[]) or type.group(logId, args[])
-  * groupCollapsed(logId, type, args[]) or type.groupCollapsed(logId, args[])
-  * groupEnd(logId, type) or type.groupEnd(logId)
-  * info(logId, type, args[]) or type.info(logId, args[])
-  * log(logId, type, args[]) or type.log(logId, args[])
-  * profile(logId, type, label) or type.profile(logId, label)
-  * profileEnd(logId, type) or type.profileEnd(logId)
-  * time(logId, type, label) or type.time(logId, label)
-  * timeEnd(logId, type, label) or type.timeEnd(logId, label)
-  * trace(logId, type) or type.trace(logId)
-  * warn(logId, type, args[]) or type.warn(logId, args[])
+  * ```clear()```
+  * ```count(logId, type, label)``` or ```type.count(logId, label)```
+  * ```error(logId, type, args[])``` or ```type.error(logId, args[])```
+  * ```group(logId, type, args[])``` or ```type.group(logId, args[])```
+  * ```groupCollapsed(logId, type, args[])``` or ```type.groupCollapsed(logId, args[])```
+  * ```groupEnd(logId, type)``` or ```type.groupEnd(logId)```
+  * ```info(logId, type, args[])``` or ```type.info(logId, args[])```
+  * ```log(logId, type, args[])``` or ```type.log(logId, args[])```
+  * ```profile(logId, type, label)``` or ```type.profile(logId, label)```
+  * ```profileEnd(logId, type)``` or ```type.profileEnd(logId)```
+  * ```time(logId, type, label)``` or ```type.time(logId, label)```
+  * ```timeEnd(logId, type, label)``` or ```type.timeEnd(logId, label)```
+  * ```trace(logId, type)``` or ```type.trace(logId)```
+  * ```warn(logId, type, args[])``` or ```type.warn(logId, args[])```
 
 Regarding the logs sent to the database, there is nothing to worry about. As soon as the buffer reaches the limit, all data will be flushed to the database. But what if I accidentally close my browser before reaching the buffer limit? Nothing to worry. On closure, all data in memory will be sent to the database without taking into account the buffer size and limit, therefore there is no data loss.
 
