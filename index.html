@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="angular.js" type="text/javascript"></script>
+		<script src="logger.js" type="text/javascript"></script>
+		<script src="app.js" type="text/javascript"></script>
+		<script src="./modules/logger/src/logger.serv.js" type="text/javascript"></script> 
+		
+		<script src="maincontroller.js" type="text/javascript"></script> 
+	</head>
+
+	<body>
+
+		<div id='content' ng-app='odin.logger' ng-controller='MainController'>
+
+			First Name:
+			<input type='text' name='firstName' ng-model='inputFirstName'/>
+			<br>
+
+			Last Name:
+			<input type='text' name='lastName' ng-model='inputLastName'/>
+			<br>
+			Full Name: 
+			{{inputFirstName}} {{inputLastName}}
+
+			<br>
+
+			<button type='button' ng-click='userButton()' class='addUser'>Add User</button>
+
+			<br>
+
+			<button type='button' ng-click='loggerButton()' class='loggerEnabler'>{{loggerValue}} Console Log</button>
+
+		</div>
+
+	</body>
+</html>
