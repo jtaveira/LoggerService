@@ -49,6 +49,8 @@ The following functions do the same as the console functions:
 
 Example usage
 
+>
+>
 >```logger.noisyMode()``` 
 >if you don't set to noisy, the console won't show you anything.
 >```logger.log("testId", "component", "testArgument")```
@@ -56,6 +58,8 @@ Example usage
 >```logger.component.log("testId", "testArgument")```
 >Console -> testArgument
 >For both commands the result is the same.
+>
+>
 
 Regarding the logs sent to the database, there is nothing to worry about. As soon as the buffer reaches the limit, all data will be flushed to the database. But what if I accidentally close my browser before reaching the buffer limit? Nothing to worry. On closure, all data in memory will be sent to the database without taking into account the buffer size and limit, therefore there is no data loss.
 
