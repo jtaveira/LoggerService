@@ -1,72 +1,40 @@
 
 angular.module("odin.logger")
 
-.controller("MainController", function($scope, logger){
-    $scope.inputFirstName = "";
-    $scope.inputLastName = "";
-    $scope.loggerValue = "Enable";
+.controller("index", function($scope, logger){
 
-    $scope.userButton = function(){
+    $scope.noisyButton = function(){
 
-    	if($scope.inputFirstName == "" || $scope.inputLastName == ""){
-    		alert("One or more fields are empty!");
-
-    		if(loggerEnabled()){
-	    		console.warn("One or more fields are empty!");
-	    	}
-    	}
-
-    	else{
-    		alert("User added successfully!");
-    		newUser = ObjectFactory($scope.inputFirstName, $scope.inputLastName);
-
-    		if(loggerEnabled()){
-	    		console.log("User added successfully!");
-	    		console.log("User number " + index + " created. Name: " + firstName + " " + lastName + "!")
-	    	}
-
-    		cleanNameValues();
-    	}
+        logger.noisyMode()
     }
 
-    $scope.loggerButton = function(){
-        
-    	if($scope.loggerValue == "Enable"){
-    		$scope.loggerValue = "Disable";
-    	}
+    $scope.logButton = function(){
 
-    	else if($scope.loggerValue == "Disable"){
-    		$scope.loggerValue = "Enable";
-    	}
-
-    	if(loggerEnabled()){
-    		console.log("Console log is now operational!");
-    	}
-
-    	else{
-    		console.log("Console log is disabled!");
-    	}	
+        logger.component.log("test", 1, 2, 3)
     }
 
-	cleanNameValues = function(){
-		$scope.inputFirstName = "";
-    	$scope.inputLastName = "";
+    $scope.warnButton = function(){
 
-    	if(loggerEnabled()){
-    		console.log("Fields are now empty!");
-    	}
-	}
+        logger.component.warn("test", 1, 2, 3)
+    }
 
-	loggerEnabled = function(){
-		if($scope.loggerValue == "Disable"){
-			return true;
-		}
+    $scope.infoButton = function(){
 
-		else{
-			return false;
-		}
-	}
+        logger.component.info("test", 1, 2, 3)
+    }
 
-    
+    $scope.errorButton = function(){
 
-});
+        logger.component.error("test", 1, 2, 3)
+    }
+
+    $scope.timeButton = function(){
+
+        logger.component.time("test", "Button")
+    }
+
+    $scope.timeEndButton = function(){
+
+        logger.component.timeEnd("test", "Button")
+    }
+})
