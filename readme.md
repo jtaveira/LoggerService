@@ -55,11 +55,11 @@ if you don't set to noisy, the console won't show you anything.
 
 ```logger.log("testId", "component", "testArgument")```
 
-Console : testArgument
+Console -> testArgument
 
 ```logger.component.log("testId", "testArgument")```
 
-Console : testArgument
+Console -> testArgument
 
 For both commands the result is the same.
 
